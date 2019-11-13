@@ -14,10 +14,10 @@ This allows to build a native binary of that service, resulting in significantly
 
 ## Execution
 
-Prepare the Java components:
+Prepare the Java components:  Note that the original instructions are to use "install" but this fails on the generation of the native image.  Make sense that we're not putting a non-java artifact into the Maven repo.
 
 ```console
-$ mvn clean install -Pnative -Dnative-image.docker-build=true
+$ mvn clean package -Pnative -Dnative-image.docker-build=true
 ```
 
 Start all components:
